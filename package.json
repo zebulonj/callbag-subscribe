@@ -4,7 +4,7 @@
   "description": "A callbag sink (listener) that connects an Observer a-la RxJS.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape index.spec.js"
   },
   "author": "Zebulon Young (zebulonj@gmail.com)",
   "license": "MIT",
@@ -26,5 +26,9 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.8.0"
   }
 }
