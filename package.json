@@ -1,0 +1,23 @@
+{
+  "name": "callbag-subscribe",
+  "version": "1.0.0",
+  "description": "A callbag sink (listener) that connects an Observer a-la RxJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "Zebulon Young (zebulonj@gmail.com)",
+  "license": "MIT",
+  "keywords": [
+    "callbag",
+    "rx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zebulonj/callbag-subscribe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zebulonj/callbag-subscribe/issues"
+  },
+  "homepage": "https://github.com/zebulonj/callbag-subscribe#readme"
+}
