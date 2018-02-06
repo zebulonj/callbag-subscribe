@@ -22,7 +22,7 @@ const observer = {
   complete: () => console.log( 'Done!' )
 };
 
-pipe(
+const dispose = pipe(
   source,
   subscribe( observer )
 );
@@ -38,4 +38,23 @@ pipe(
 // 8
 // 9
 // Done!
+```
+
+### Disposal
+
+Use the returned disposal function to terminate the subscription.
+
+```js
+const source = fromEvent( document.body, 'click' );
+
+const dispose = pipe(
+  source,
+  subscribe({
+    next: ev => console.log( 'Click:', ev )
+  })
+);
+
+// Do some stuff...
+
+dispose(); // Terminate the subscription.
 ```
