@@ -1,6 +1,6 @@
 {
   "name": "callbag-subscribe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A callbag sink (listener) that connects an Observer a-la RxJS.",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,9 @@
   },
   "author": "Zebulon Young (zebulonj@gmail.com)",
   "license": "MIT",
+  "files": [
+    "README.md"
+  ],
   "keywords": [
     "callbag",
     "rx"
