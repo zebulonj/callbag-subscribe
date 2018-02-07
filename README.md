@@ -1,4 +1,4 @@
-# callbag-subscribe
+# callbag-subscribe 👜
 
 A callbag sink (listener) that connects an Observer a-la RxJS.
 
