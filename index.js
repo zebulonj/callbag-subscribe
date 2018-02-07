@@ -6,6 +6,7 @@ const subscribe = ({ next, error, complete }) => source => {
       talkback = d;
     }
     if (t === 1) next(d);
+    if (t === 1 || t === 0) talkback(1);  // Pull
     if (t === 2 && !d && complete) complete();
     if (t === 2 && !!d && error) error( d );
   });
