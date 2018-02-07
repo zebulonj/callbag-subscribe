@@ -16,15 +16,13 @@ import subscribe from 'callbag-subscribe';
 
 const source = interval( 10 );
 
-const observer = {
-  next: val => console.log( val ),
-  error: err => console.error( err ),
-  complete: () => console.log( 'Done!' )
-};
-
-const dispose = pipe(
+pipe(
   source,
-  subscribe( observer )
+  subscribe({
+    next: val => console.log( val ),
+    complete: () => console.log( 'Done!' ),
+    error: err => console.error( err )
+  })
 );
 
 // 0
