@@ -2,9 +2,6 @@
 
 A callbag sink (listener) that connects an Observer a-la RxJS.
 
-_This has just a slightly different signature than [`callbag-observe`](https://github.com/staltz/callbag-observe),
-for use with observer objects._
-
 `npm install callbag-subscribe`
 
 ## Usage:
