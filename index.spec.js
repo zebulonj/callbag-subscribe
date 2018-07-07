@@ -2,17 +2,17 @@ const test = require( 'tape' );
 
 const subscribe = require( './index' );
 
+const range = function* ( start, end ) {
+  let current = start;
+
+  while ( current <= end ) {
+    yield current;
+    current = current + 1;
+  }
+}
+
 test( "subscribe() should pull from its source", assert => {
   assert.plan( 2 );
-
-  const range = function* ( start, end ) {
-    let current = start;
-
-    while ( current <= end ) {
-      yield current;
-      current = current + 1;
-    }
-  }
 
   const source = ( type, data ) => {
     const iter = range( 0, 3 );
@@ -55,5 +55,28 @@ test( "subscribe() should return a disposal function", assert => {
 
   dispose();
 
+  assert.end();
+});
+
+test("subscribe() should accept a function", assert => {
+  assert.plan( 1 );
+
+  const source = ( type, data ) => {
+    const iter = range( 0, 3 );
+
+    if ( type === 0 ) data( 0, ( t ) => {
+      if ( t === 1 ) {
+        const { done, value } = iter.next();
+
+        if ( done ) data( 2 );
+        else data( 1, value );
+      }
+    });
+  };
+
+  let events = [];
+  subscribe(val => events.push( val ))( source );
+
+  assert.deepEqual( events, [0, 1, 2, 3], 'The sink should pull the expected events.' );
   assert.end();
 });
