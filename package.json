@@ -10,7 +10,12 @@
   "license": "MIT",
   "keywords": [
     "callbag",
-    "rx"
+    "rx",
+    "frp",
+    "reactive",
+    "functional",
+    "observable",
+    "disposable"
   ],
   "repository": {
     "type": "git",
