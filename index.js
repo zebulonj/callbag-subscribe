@@ -10,7 +10,7 @@ const subscribe = (listener = {}) => source => {
     if (t === 0) {
       talkback = d;
     }
-    if (t === 1) next(d);
+    if (t === 1 && next) next(d);
     if (t === 1 || t === 0) talkback(1);  // Pull
     if (t === 2 && !d && complete) complete();
     if (t === 2 && !!d && error) error( d );

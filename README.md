@@ -8,6 +8,34 @@ A callbag sink (listener) that connects an Observer a-la RxJS.
 
 ## Usage:
 
+### Simple (next only)
+
+```js
+import pipe from 'callbag-pipe';
+import interval from 'callbag-interval';
+import subscribe from 'callbag-subscribe';
+
+const source = interval( 10 );
+
+pipe(
+  source,
+  subscribe( val => console.log( val ) )
+);
+
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+```
+
+### Complete observer
+
 ```js
 import pipe from 'callbag-pipe';
 import interval from 'callbag-interval';
