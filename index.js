@@ -1,12 +1,9 @@
 const subscribe = (listener = {}) => source => {
-  let complete, error, next;
-
   if (typeof listener === "function") {
-    next = listener;
-  } else {
-    ({ next, error, complete } = listener);
+    listener = { next: listener };
   }
 
+  let { next, error, complete } = listener;
   let talkback;
 
   source(0, (t, d) => {

@@ -1,5 +1,7 @@
 # callbag-subscribe 👜
 
+[![CircleCI](https://img.shields.io/circleci/project/zebulonj/callbag-subscribe.svg)]() [![npm](https://img.shields.io/npm/v/callbag-subscribe.svg)]() [![npm](https://img.shields.io/npm/dt/callbag-subscribe.svg)]()
+
 A callbag sink (listener) that connects an Observer a-la RxJS.
 
 `npm install callbag-subscribe`
