@@ -1,6 +1,6 @@
 const test = require( 'tape' );
 
-const subscribe = require( './index' );
+const subscribe = require( '.' );
 
 const range = function* ( start, end ) {
   let current = start;
