@@ -2,9 +2,13 @@
   "name": "callbag-subscribe",
   "version": "1.4.1",
   "description": "A callbag sink (listener) that connects an Observer a-la RxJS.",
-  "main": "index.js",
+  "main": "index.cjs.js",
+  "module": "index.js",
   "scripts": {
-    "test": "tape index.spec.js"
+    "build": "rollup $npm_package_module -o $npm_package_main --f cjs",
+    "pretest": "npm run build",
+    "test": "tape index.spec.js",
+    "prepare": "npm test"
   },
   "author": "Zebulon Young (zebulonj@gmail.com)",
   "license": "MIT",
@@ -27,6 +31,7 @@
   "homepage": "https://github.com/zebulonj/callbag-subscribe#readme",
   "files": [
     "README.md",
+    "index.cjs.js",
     "index.js"
   ],
   "publishConfig": {
@@ -34,6 +39,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "rollup": "^0.66.6",
     "tape": "^4.8.0"
   }
 }

@@ -23,4 +23,4 @@ const subscribe = (listener = {}) => source => {
   return dispose;
 }
 
-module.exports = subscribe;
+export default subscribe;
