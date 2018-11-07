@@ -1,6 +1,6 @@
 {
   "name": "callbag-subscribe",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A callbag sink (listener) that connects an Observer a-la RxJS.",
   "main": "index.cjs.js",
   "module": "index.js",
