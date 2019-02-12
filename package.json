@@ -32,12 +32,15 @@
   "files": [
     "README.md",
     "index.cjs.js",
-    "index.js"
+    "index.js",
+    "*.d.ts"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
+  "dependencies": {
+    "callbag": "^1.2.0"
+  },
   "devDependencies": {
     "rollup": "^0.66.6",
     "tape": "^4.8.0"
